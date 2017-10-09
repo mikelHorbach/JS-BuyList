@@ -29,8 +29,11 @@ body {
     background: #f4f4f4;
 }
 .secondColumn {
-    padding: 10px;
+    /*padding: 10px;*/
+    padding-top:10px;
+    padding-bottom:10px;
     background: white;
+    width:100%;
 }
 
 .bl-label {
@@ -57,7 +60,8 @@ body {
     color: black;
 }
 .buttonAdd {
-    height: 34px;
+    position: relative;
+    height: 38px;
     width: 20%;
     border: 0;
     background: #197cd0;
@@ -71,7 +75,44 @@ body {
 .buttonAdd:active {
     background: #041fd0; ;
 }
+.buttonAdd::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #b83877;
+    top: -10px;
+    height: 0;
+    width:75px;
+    opacity: 0;
+    font-size: 0.8em;
+    padding:5px;
+    padding-top:7px;
+    border-radius: 0.5em;
+    transform: translate(-30px,0);
+    transition: top 1.2s ease,opacity 2s ease,height 1.2s ease;
+}
+
+.buttonAdd:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    height:14px;
+    width:75px;
+    opacity: 0.8;
+    background: #b83877;
+    font-size: 0.8em;
+    padding:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-radius: 0.5em;
+    top: -27px;
+    transform: translate(-30px,0);
+
+}
+
+
+
+
 .bl-minus {
+    position: relative;
     background: red;
     border-radius: 10em;
     margin-bottom: 4px;
@@ -88,7 +129,40 @@ body {
 .bl-minus:active {
     background: darkred;
 }
+.bl-minus::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #b83877;
+    top: -10px;
+    height: 0;
+    width:60px;
+    opacity: 0;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    border-radius: 0.5em;
+    transform: translate(-30px,0);
+    transition: top 1.2s ease,opacity 2s ease,height 1.2s ease;
+}
+
+.bl-minus:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    height:10px;
+    width:60px;
+    opacity: 0.8;
+    background: #b83877;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-radius: 0.5em;
+    top: -27px;
+    transform: translate(-30px,0);
+
+}
 .bl-plus {
+    position: relative;
     background: green;
     border-radius: 10em;
     margin-bottom: 4px;
@@ -102,10 +176,43 @@ body {
 .bl-plus:hover {
     background: greenyellow;
 }
+.bl-plus::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #b83877;
+    top: -10px;
+    height: 0;
+    width:60px;
+    opacity: 0;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    border-radius: 0.5em;
+    transform: translate(-30px,0);
+    transition: top 1.2s ease,opacity 2s ease,height 1.2s ease;
+}
+
+.bl-plus:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    height:10px;
+    width:60px;
+    opacity: 0.8;
+    background: #b83877;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-radius: 0.5em;
+    top: -27px;
+    transform: translate(-30px,0);
+
+}
 .bl-plus:active {
     background: darkgreen;
 }
 .buttonBought {
+    position: relative;
     background: #e4e5d0;
     border-radius: 0.4em;
     margin-top: 7px;
@@ -122,7 +229,42 @@ body {
 .boughtButton:active{
     background-color: #b3b6b0;
 }
+.buttonBought::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    color: white;
+    background: #b83877;
+    top: -10px;
+    height: 0;
+    width:75px;
+    opacity: 0;
+    font-size: 0.7em;
+    padding:5px;
+    padding-top:7px;
+    border-radius: 0.5em;
+    transform: translate(-30px,0);
+    transition: top 1.2s ease,opacity 2s ease,height 1.2s ease;
+}
+
+.buttonBought:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    color: white;
+    height:14px;
+    width:75px;
+    opacity: 0.8;
+    background: #b83877;
+    font-size: 0.7em;
+    padding:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-radius: 0.5em;
+    top: -27px;
+    transform: translate(-30px,0);
+
+}
 .buttonDelete {
+    position: relative;
     background: red;
     border-radius: 6px;
     margin-top: 7px;
@@ -137,25 +279,63 @@ body {
 .buttonDelete:hover {
     background: darkred;
 }
+.buttonDelete::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #b83877;
+    top: -10px;
+    height: 0;
+    width:60px;
+    opacity: 0;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    border-radius: 0.5em;
+    transform: translate(-30px,0);
+    transition: top 1.2s ease,opacity 2s ease,height 1.2s ease;
+}
+
+.buttonDelete:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    height:10px;
+    width:60px;
+    opacity: 0.8;
+    background: #b83877;
+    font-size: 0.6em;
+    padding:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-radius: 0.5em;
+    top: -27px;
+    transform: translate(-30px,0);
+
+}
+
 .product{
     border-top:1px solid rgba(34,36,38,.15);
     display: flex;
 }
-.productName {
+.ProductColumn, .plusMinus, .boughtColumn {
+    float:left;
+    box-sizing: border-box;
+}
+.ProductColumn {
     padding: 14px;
     width: 25%;
 }
-.plusMinus,.boughtColumn{
+.plusMinus, .boughtColumn{
     padding-left: 14px;
     padding-right: 14px;
     padding-top: 7px;
     width: 37.5%;
     text-align: right;
 }
-.productName,.plusMinus,.boughtColumn {
-    float:left;
-    box-sizing: border-box;
+.boughtColumn{
+    padding:10px;
 }
+
+
 .plusMinus {
     text-align: center;
 }
@@ -174,25 +354,99 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
-.unpurchasedProducts {
+
+.unpurchasedProducts{
+    display: block;
+    padding: 10px;
+    border-bottom:1px solid gray;
+    border-top:1px solid gray;
+}
+
+.unpurchasedProduct {
+    background-color: lightgray;
     border-top:1px solid rgba(34,36,38,.15);
     border-bottom:1px solid rgba(34,36,38,.15);
-    display:flex ;
-
-}
-.productWasBought {
-    background-color: lightgray;
+    border-radius: 0.3em;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border-radius: 0.3em;
-    vertical-align: center;
-    display: inline-block;
-    text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 8px;
     padding-left: 8px;
+    display:inline-block;
+
+}
+
+.productWasBought {
+    vertical-align: center;
+    text-align: center;
+}
+
+.amountOfProducts{
+    border-radius: 1em;
+    background: orange;
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:3px;
+}
+
+
+
+.badge {
+position: fixed;
+    bottom: -120px;
+    left: 100px;
+    width: 150px;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    background: #b81a98;
+    text-align: center;
+    color: white;
+    transition: all 1s ease;
+    padding: 10px;
+
+}
+.badge:hover {
+    background: #8c2be4;
+    bottom: 0;
+}
+.createBy {
+    margin-top: 10px;
+    margin-left : 10px;
+    text-align: left;
+
+}
+.name {
+    margin-top: 10px;
+    margin-left : 10px;
+    margin-bottom : 0px;
+    text-align: left;
+
+}
+@media print {
+    .badge {
+        background: white;
+        border: 1.5px solid #b81a98;
+        padding-top: 0;
+        bottom: 0;
+
+    }
+    .buyList {
+        display: none;
+    }
+    .
+}
+
+@media (max-width: 500px) {
+    .bl-row {
+        width: 100%;
+    }.bl-bought {
+        width: 100%;
+    }
 
 }
